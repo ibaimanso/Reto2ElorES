@@ -15,6 +15,7 @@ import dto.UserDTO;
 import util.AppLogger;
 import javax.swing.border.EmptyBorder;
 import java.awt.Cursor;
+import javax.swing.ImageIcon;
 
 /**
  * Panel de login de la aplicación ElorES.
@@ -58,14 +59,6 @@ public class LoginPanel extends JPanel {
         lblTitle.setForeground(new Color(41, 128, 185));
         lblTitle.setBounds(300, 80, 400, 60);
         add(lblTitle);
-        
-        // Subtítulo
-        JLabel lblSubtitle = new JLabel("Sistema Educativo Elorrieta");
-        lblSubtitle.setHorizontalAlignment(SwingConstants.CENTER);
-        lblSubtitle.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-        lblSubtitle.setForeground(new Color(127, 140, 141));
-        lblSubtitle.setBounds(300, 145, 400, 30);
-        add(lblSubtitle);
         
         // Panel contenedor del formulario
         JPanel formPanel = new JPanel();
@@ -133,6 +126,11 @@ public class LoginPanel extends JPanel {
         lblLoading.setVisible(false);
         add(lblLoading);
         
+        JLabel lblNewLabel = new JLabel("New label");
+        lblNewLabel.setIcon(new ImageIcon("../../resources\\EEM-Logo-principal-horizontal.png"));
+        lblNewLabel.setBounds(-73, 11, 773, 230);
+        add(lblNewLabel);
+        
         // Enter en password también hace login
         txtPassword.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -140,13 +138,6 @@ public class LoginPanel extends JPanel {
             }
         });
         
-        // Footer
-        JLabel lblFooter = new JLabel("© 2026 Colegio Elorrieta - Todos los derechos reservados");
-        lblFooter.setHorizontalAlignment(SwingConstants.CENTER);
-        lblFooter.setFont(new Font("Segoe UI", Font.PLAIN, 10));
-        lblFooter.setForeground(new Color(149, 165, 166));
-        lblFooter.setBounds(300, 630, 400, 20);
-        add(lblFooter);
     }
     
     /**
