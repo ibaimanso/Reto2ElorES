@@ -22,6 +22,11 @@ public class UserDTO implements Serializable {
     private String tipoId;
     private String tipoNombre;
     
+    // Campos para matriculación (ciclo y curso)
+    private Integer cicloId;
+    private String cicloNombre;
+    private Integer curso;
+    
     public UserDTO() {
     }
     
@@ -120,5 +125,29 @@ public class UserDTO implements Serializable {
     
     public void setTipoNombre(String tipoNombre) {
         this.tipoNombre = tipoNombre;
+    }
+    
+    public Integer getCicloId() {
+        return cicloId;
+    }
+    
+    public void setCicloId(Integer cicloId) {
+        this.cicloId = cicloId;
+    }
+    
+    public String getCicloNombre() {
+        return cicloNombre;
+    }
+    
+    public void setCicloNombre(String cicloNombre) {
+        this.cicloNombre = cicloNombre;
+    }
+    
+    public Integer getCurso() {
+        return curso;
+    }
+    
+    public void setCurso(Integer curso) {
+        this.curso = curso;
     }
 }

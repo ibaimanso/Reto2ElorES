@@ -22,6 +22,7 @@ public class MainFrame extends JFrame {
     private LoginPanel loginPanel;
     private MenuPanel menuPanel;
     private ProfilePanel profilePanel;
+    private AlumnosPanel alumnosPanel;
     
     // Usuario actual
     private UserDTO currentUser;
@@ -30,6 +31,7 @@ public class MainFrame extends JFrame {
     public static final String LOGIN_VIEW = "LOGIN";
     public static final String MENU_VIEW = "MENU";
     public static final String PROFILE_VIEW = "PROFILE";
+    public static final String ALUMNOS_VIEW = "ALUMNOS";
 
     /**
      * Crea el frame principal.
@@ -77,6 +79,10 @@ public class MainFrame extends JFrame {
         profilePanel = new ProfilePanel(this);
         contentPane.add(profilePanel, PROFILE_VIEW);
         
+        // Crear panel de alumnos
+        alumnosPanel = new AlumnosPanel(this);
+        contentPane.add(alumnosPanel, ALUMNOS_VIEW);
+        
         AppLogger.info("Paneles creados correctamente");
     }
     
@@ -106,6 +112,15 @@ public class MainFrame extends JFrame {
         profilePanel.loadProfileData();
         cardLayout.show(contentPane, PROFILE_VIEW);
         AppLogger.debug("Mostrando panel de perfil");
+    }
+    
+    /**
+     * Muestra el panel de alumnos.
+     */
+    public void showAlumnosPanel() {
+        alumnosPanel.loadAlumnos();
+        cardLayout.show(contentPane, ALUMNOS_VIEW);
+        AppLogger.debug("Mostrando panel de alumnos");
     }
     
     /**

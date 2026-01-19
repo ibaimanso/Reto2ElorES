@@ -120,8 +120,7 @@ public class MenuPanel extends JPanel {
         btnAlumnos.setBackground(new Color(46, 204, 113));
         btnAlumnos.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                mainFrame.showInfo("Funcionalidad de Alumnos en desarrollo");
-                // TODO: Implementar navegación a AlumnosPanel
+                mainFrame.showAlumnosPanel();
             }
         });
         optionsPanel.add(btnAlumnos);

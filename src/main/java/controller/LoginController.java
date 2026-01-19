@@ -16,6 +16,7 @@ public class LoginController extends BaseController {
     
     /**
      * Maneja el proceso de login.
+     * Solo permite el acceso a profesores (tipo_id = 3).
      * @return UserDTO si el login es exitoso, null en caso contrario
      */
     public UserDTO handleLogin(String username, String password) {
@@ -37,7 +38,13 @@ public class LoginController extends BaseController {
             UserDTO user = authService.login(username, password);
             
             if (user != null) {
-                AppLogger.info("Login exitoso para: " + username);
+                // Validar que el usuario es un profesor (tipo_id = 3)
+                if (!"3".equals(user.getTipoId())) {
+                    AppLogger.warn("Intento de login de usuario no autorizado: " + username + " (tipo: " + user.getTipoId() + ")");
+                    return null;
+                }
+                
+                AppLogger.info("Login exitoso para profesor: " + username);
                 // TODO: Cambiar a pantalla principal
             }
             

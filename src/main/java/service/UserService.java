@@ -76,6 +76,16 @@ public class UserService {
         }
         user.setTipoNombre((String) data.get("tipo_nombre"));
         
+        // Parsear datos de matriculación
+        if (data.get("ciclo_id") != null) {
+            user.setCicloId(((Number) data.get("ciclo_id")).intValue());
+        }
+        user.setCicloNombre((String) data.get("ciclo_nombre"));
+        
+        if (data.get("curso") != null) {
+            user.setCurso(((Number) data.get("curso")).intValue());
+        }
+        
         return user;
     }
     
@@ -87,9 +97,24 @@ public class UserService {
             Response response = client.sendRequest(ActionType.GET_ALUMNOS, null);
             
             if (response.getStatus() == StatusCode.SUCCESS) {
-                // TODO: Parsear List<UserDTO>
-                AppLogger.info("Alumnos obtenidos correctamente");
-                return null;
+                Object data = response.getData();
+                
+                if (data instanceof List) {
+                    @SuppressWarnings("unchecked")
+                    List<Object> listData = (List<Object>) data;
+                    
+                    List<UserDTO> alumnos = new java.util.ArrayList<>();
+                    for (Object obj : listData) {
+                        if (obj instanceof Map) {
+                            @SuppressWarnings("unchecked")
+                            Map<String, Object> alumnoData = (Map<String, Object>) obj;
+                            alumnos.add(parseUserFromMap(alumnoData));
+                        }
+                    }
+                    
+                    AppLogger.info("Alumnos obtenidos correctamente: " + alumnos.size());
+                    return alumnos;
+                }
             }
             
             AppLogger.error("Error al obtener alumnos: " + response.getMessage());
@@ -110,8 +135,15 @@ public class UserService {
             Response response = client.sendRequest(ActionType.GET_ALUMNO_BY_ID, data);
             
             if (response.getStatus() == StatusCode.SUCCESS) {
-                // TODO: Parsear UserDTO
-                return null;
+                Object responseData = response.getData();
+                
+                if (responseData instanceof Map) {
+                    @SuppressWarnings("unchecked")
+                    Map<String, Object> alumnoData = (Map<String, Object>) responseData;
+                    return parseUserFromMap(alumnoData);
+                } else if (responseData instanceof UserDTO) {
+                    return (UserDTO) responseData;
+                }
             }
             
             return null;
@@ -131,14 +163,65 @@ public class UserService {
             Response response = client.sendRequest(ActionType.FILTER_ALUMNOS_BY_CICLO, data);
             
             if (response.getStatus() == StatusCode.SUCCESS) {
-                // TODO: Parsear List<UserDTO>
-                return null;
+                Object responseData = response.getData();
+                
+                if (responseData instanceof List) {
+                    @SuppressWarnings("unchecked")
+                    List<Object> listData = (List<Object>) responseData;
+                    
+                    List<UserDTO> alumnos = new java.util.ArrayList<>();
+                    for (Object obj : listData) {
+                        if (obj instanceof Map) {
+                            @SuppressWarnings("unchecked")
+                            Map<String, Object> alumnoData = (Map<String, Object>) obj;
+                            alumnos.add(parseUserFromMap(alumnoData));
+                        }
+                    }
+                    
+                    return alumnos;
+                }
             }
             
             return null;
             
         } catch (Exception e) {
             AppLogger.error("Error al filtrar alumnos por ciclo", e);
+            return null;
+        }
+    }
+    
+    /**
+     * Filtra alumnos por módulo.
+     */
+    public List<UserDTO> filterAlumnosByModulo(Integer moduloId) {
+        try {
+            Map<String, Object> data = Map.of("moduloId", moduloId);
+            Response response = client.sendRequest(ActionType.FILTER_ALUMNOS_BY_MODULO, data);
+            
+            if (response.getStatus() == StatusCode.SUCCESS) {
+                Object responseData = response.getData();
+                
+                if (responseData instanceof List) {
+                    @SuppressWarnings("unchecked")
+                    List<Object> listData = (List<Object>) responseData;
+                    
+                    List<UserDTO> alumnos = new java.util.ArrayList<>();
+                    for (Object obj : listData) {
+                        if (obj instanceof Map) {
+                            @SuppressWarnings("unchecked")
+                            Map<String, Object> alumnoData = (Map<String, Object>) obj;
+                            alumnos.add(parseUserFromMap(alumnoData));
+                        }
+                    }
+                    
+                    return alumnos;
+                }
+            }
+            
+            return null;
+            
+        } catch (Exception e) {
+            AppLogger.error("Error al filtrar alumnos por módulo", e);
             return null;
         }
     }

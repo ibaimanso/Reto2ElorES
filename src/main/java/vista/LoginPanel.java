@@ -52,13 +52,6 @@ public class LoginPanel extends JPanel {
         setBorder(new EmptyBorder(20, 20, 20, 20));
         setBackground(new Color(240, 240, 240));
         
-        JLabel lblTitle = new JLabel("ElorES");
-        lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        lblTitle.setFont(new Font("Segoe UI", Font.BOLD, 48));
-        lblTitle.setForeground(new Color(41, 128, 185));
-        lblTitle.setBounds(300, 80, 400, 60);
-        add(lblTitle);
-        
         JPanel formPanel = new JPanel();
         formPanel.setBackground(Color.WHITE);
         formPanel.setLayout(null);
@@ -119,7 +112,7 @@ public class LoginPanel extends JPanel {
         
         JLabel logo = new JLabel("");
         logo.setIcon(new ImageIcon("resources\\logoElorrieta.png"));
-        logo.setBounds(20, 21, 400, 107);
+        logo.setBounds(295, 81, 400, 107);
         add(logo);
         
         // Enter en password también hace login
@@ -166,7 +159,7 @@ public class LoginPanel extends JPanel {
                         onLoginSuccess(user);
                     } else {
                         AppLogger.error("Login fallido para: " + username);
-                        showError("Usuario o contraseña incorrectos");
+                        showError("Acceso denegado. Solo profesores pueden acceder.");
                         txtPassword.setText("");
                         txtPassword.requestFocus();
                     }
@@ -189,6 +182,9 @@ public class LoginPanel extends JPanel {
      */
     private void onLoginSuccess(UserDTO user) {
         AppLogger.info("Usuario autenticado: " + user.getUsername());
+        
+        // Establecer usuario actual en MainFrame
+        mainFrame.setCurrentUser(user);
         
         // Limpiar campos
         txtUsername.setText("");
