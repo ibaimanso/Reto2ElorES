@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import dto.UserDTO;
 import util.AppLogger;
 
 /**
@@ -20,10 +21,15 @@ public class MainFrame extends JFrame {
     // Paneles de la aplicación
     private LoginPanel loginPanel;
     private MenuPanel menuPanel;
+    private ProfilePanel profilePanel;
+    
+    // Usuario actual
+    private UserDTO currentUser;
     
     // Nombres de las vistas
     public static final String LOGIN_VIEW = "LOGIN";
     public static final String MENU_VIEW = "MENU";
+    public static final String PROFILE_VIEW = "PROFILE";
 
     /**
      * Crea el frame principal.
@@ -32,6 +38,7 @@ public class MainFrame extends JFrame {
         initComponents();
         createPanels();
         showLoginPanel();
+        setResizable(false);
     }
     
     /**
@@ -62,9 +69,13 @@ public class MainFrame extends JFrame {
         loginPanel = new LoginPanel(this);
         contentPane.add(loginPanel, LOGIN_VIEW);
         
-        // Crear panel de menú (se inicializa después del login)
+        // Crear panel de menú
         menuPanel = new MenuPanel(this);
         contentPane.add(menuPanel, MENU_VIEW);
+        
+        // Crear panel de perfil
+        profilePanel = new ProfilePanel(this);
+        contentPane.add(profilePanel, PROFILE_VIEW);
         
         AppLogger.info("Paneles creados correctamente");
     }
@@ -81,8 +92,35 @@ public class MainFrame extends JFrame {
      * Muestra el panel de menú principal.
      */
     public void showMenuPanel() {
+        if (currentUser != null) {
+            menuPanel.setUserInfo(currentUser);
+        }
         cardLayout.show(contentPane, MENU_VIEW);
         AppLogger.debug("Mostrando panel de menú");
+    }
+    
+    /**
+     * Muestra el panel de perfil.
+     */
+    public void showProfilePanel() {
+        profilePanel.loadProfileData();
+        cardLayout.show(contentPane, PROFILE_VIEW);
+        AppLogger.debug("Mostrando panel de perfil");
+    }
+    
+    /**
+     * Establece el usuario actual después del login.
+     */
+    public void setCurrentUser(UserDTO user) {
+        this.currentUser = user;
+        AppLogger.info("Usuario actual establecido: " + (user != null ? user.getUsername() : "null"));
+    }
+    
+    /**
+     * Obtiene el usuario actual.
+     */
+    public UserDTO getCurrentUser() {
+        return currentUser;
     }
     
     /**

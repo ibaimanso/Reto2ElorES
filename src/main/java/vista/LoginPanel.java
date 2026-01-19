@@ -52,7 +52,6 @@ public class LoginPanel extends JPanel {
         setBorder(new EmptyBorder(20, 20, 20, 20));
         setBackground(new Color(240, 240, 240));
         
-        // Título principal
         JLabel lblTitle = new JLabel("ElorES");
         lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
         lblTitle.setFont(new Font("Segoe UI", Font.BOLD, 48));
@@ -60,39 +59,33 @@ public class LoginPanel extends JPanel {
         lblTitle.setBounds(300, 80, 400, 60);
         add(lblTitle);
         
-        // Panel contenedor del formulario
         JPanel formPanel = new JPanel();
         formPanel.setBackground(Color.WHITE);
         formPanel.setLayout(null);
         formPanel.setBounds(325, 220, 350, 280);
         add(formPanel);
         
-        // Label: Usuario
         JLabel lblUsername = new JLabel("Usuario:");
         lblUsername.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         lblUsername.setBounds(30, 30, 290, 25);
         formPanel.add(lblUsername);
         
-        // Campo de texto: Usuario
         txtUsername = new JTextField();
         txtUsername.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         txtUsername.setBounds(30, 60, 290, 35);
         formPanel.add(txtUsername);
         txtUsername.setColumns(10);
         
-        // Label: Contraseña
         JLabel lblPassword = new JLabel("Contraseña:");
         lblPassword.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         lblPassword.setBounds(30, 110, 290, 25);
         formPanel.add(lblPassword);
         
-        // Campo de contraseña
         txtPassword = new JPasswordField();
         txtPassword.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         txtPassword.setBounds(30, 140, 290, 35);
         formPanel.add(txtPassword);
         
-        // Botón de login
         btnLogin = new JButton("Iniciar Sesión");
         btnLogin.setFont(new Font("Segoe UI", Font.BOLD, 14));
         btnLogin.setBackground(new Color(41, 128, 185));
@@ -108,7 +101,6 @@ public class LoginPanel extends JPanel {
         });
         formPanel.add(btnLogin);
         
-        // Label de error (inicialmente oculto)
         lblError = new JLabel("");
         lblError.setHorizontalAlignment(SwingConstants.CENTER);
         lblError.setFont(new Font("Segoe UI", Font.PLAIN, 12));
@@ -117,7 +109,6 @@ public class LoginPanel extends JPanel {
         lblError.setVisible(false);
         add(lblError);
         
-        // Label de carga (inicialmente oculto)
         lblLoading = new JLabel("Iniciando sesión...");
         lblLoading.setHorizontalAlignment(SwingConstants.CENTER);
         lblLoading.setFont(new Font("Segoe UI", Font.ITALIC, 12));
@@ -126,10 +117,10 @@ public class LoginPanel extends JPanel {
         lblLoading.setVisible(false);
         add(lblLoading);
         
-        JLabel lblNewLabel = new JLabel("New label");
-        lblNewLabel.setIcon(new ImageIcon("../../resources\\EEM-Logo-principal-horizontal.png"));
-        lblNewLabel.setBounds(-73, 11, 773, 230);
-        add(lblNewLabel);
+        JLabel logo = new JLabel("");
+        logo.setIcon(new ImageIcon("resources\\logoElorrieta.png"));
+        logo.setBounds(20, 21, 400, 107);
+        add(logo);
         
         // Enter en password también hace login
         txtPassword.addActionListener(new ActionListener() {

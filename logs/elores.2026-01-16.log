@@ -1,0 +1,254 @@
+2026-01-16 15:57:03.019 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 15:57:03.021 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 15:57:03.067 [main] ERROR ElorES - Error al conectar con el servidor
+java.io.StreamCorruptedException: invalid stream header: 7B0A2020
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:974)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:401)
+	at client.SocketClient.connect(SocketClient.java:55)
+	at app.App.main(App.java:46)
+2026-01-16 15:57:03.069 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 15:57:03.070 [main] ERROR ElorES - ERROR CRÍTICO: No se pudo conectar con ElorServ
+2026-01-16 15:57:03.070 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 15:57:03.070 [main] ERROR ElorES - 
+2026-01-16 15:57:03.070 [main] ERROR ElorES - VERIFICA:
+2026-01-16 15:57:03.070 [main] ERROR ElorES -   1. El servidor ElorServ está ejecutándose
+2026-01-16 15:57:03.070 [main] ERROR ElorES -   2. El servidor escucha en localhost:9000
+2026-01-16 15:57:03.070 [main] ERROR ElorES -   3. La base de datos está disponible
+2026-01-16 15:57:03.070 [main] ERROR ElorES -   4. No hay firewall bloqueando la conexión
+2026-01-16 15:57:03.070 [main] ERROR ElorES - 
+2026-01-16 15:57:03.070 [main] ERROR ElorES - Para probar la conexión, ejecuta: test.ConnectionTest
+2026-01-16 16:03:48.394 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 16:03:48.396 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 16:03:48.434 [main] ERROR ElorES - Error al conectar con el servidor
+java.io.StreamCorruptedException: invalid stream header: 7B0A2020
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:974)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:401)
+	at client.SocketClient.connect(SocketClient.java:55)
+	at app.App.main(App.java:22)
+2026-01-16 16:03:48.436 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:03:48.436 [main] ERROR ElorES - ERROR CRÍTICO: No se pudo conectar con ElorServ
+2026-01-16 16:03:48.437 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:03:48.438 [main] ERROR ElorES - 
+2026-01-16 16:03:48.438 [main] ERROR ElorES - VERIFICA:
+2026-01-16 16:03:48.439 [main] ERROR ElorES -   1. El servidor ElorServ está ejecutándose
+2026-01-16 16:03:48.439 [main] ERROR ElorES -   2. El servidor escucha en localhost:9000
+2026-01-16 16:03:48.439 [main] ERROR ElorES -   3. La base de datos está disponible
+2026-01-16 16:03:48.439 [main] ERROR ElorES -   4. No hay firewall bloqueando la conexión
+2026-01-16 16:03:48.439 [main] ERROR ElorES - 
+2026-01-16 16:03:48.439 [main] ERROR ElorES - Para probar la conexión, ejecuta: test.ConnectionTest
+2026-01-16 16:07:45.069 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 16:07:45.071 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 16:07:45.138 [main] ERROR ElorES - Error al deserializar JSON: java.io.EOFException: End of input at line 1 column 2 path $.
+2026-01-16 16:07:45.139 [main] INFO  ElorES - Conexión establecida con ElorServ
+2026-01-16 16:07:45.139 [main] INFO  ElorES - ✓ Conexión establecida con ElorServ
+2026-01-16 16:07:45.140 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:07:45.140 [main] INFO  ElorES - APLICACIÓN LISTA
+2026-01-16 16:07:45.140 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:07:45.141 [main] INFO  ElorES - 
+2026-01-16 16:07:45.141 [main] INFO  ElorES - SIGUIENTE PASO:
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   - Implementar interfaz gráfica (Swing/JavaFX)
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   - Crear ventanas: Login, Main, Horarios, Reuniones
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   - Conectar controllers con la UI
+2026-01-16 16:07:45.141 [main] INFO  ElorES - 
+2026-01-16 16:07:45.141 [main] INFO  ElorES - Estructura de clases creada correctamente:
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   ✓ Protocol (Request/Response/ActionType/StatusCode)
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   ✓ DTOs (UserDTO/HorarioDTO/ReunionDTO)
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   ✓ Client (SocketClient)
+2026-01-16 16:07:45.141 [main] INFO  ElorES -   ✓ Services (Auth/User/Horario/Reunion)
+2026-01-16 16:07:45.142 [main] INFO  ElorES -   ✓ Controllers (Login/Main/Horario/Reunion)
+2026-01-16 16:07:45.142 [main] INFO  ElorES -   ✓ Utils (Logger/RSAEncryption)
+2026-01-16 16:07:45.142 [main] INFO  ElorES - Presiona Ctrl+C para salir...
+2026-01-16 16:57:22.517 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 16:57:22.519 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 16:57:22.583 [main] ERROR ElorES - Error al deserializar JSON: java.io.EOFException: End of input at line 1 column 2 path $.
+2026-01-16 16:57:22.583 [main] INFO  ElorES - Conexión establecida con ElorServ
+2026-01-16 16:57:22.583 [main] INFO  ElorES - ✓ Conexión establecida con ElorServ
+2026-01-16 16:57:22.585 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:57:22.585 [main] INFO  ElorES - INICIANDO INTERFAZ GRÁFICA
+2026-01-16 16:57:22.586 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:57:22.655 [main] INFO  ElorES - ✓ Look and Feel configurado
+2026-01-16 16:57:22.806 [AWT-EventQueue-0] INFO  ElorES - MainFrame inicializado
+2026-01-16 16:57:22.809 [AWT-EventQueue-0] INFO  ElorES - Inicializando LoginController
+2026-01-16 16:57:22.835 [AWT-EventQueue-0] INFO  ElorES - Inicializando MainController
+2026-01-16 16:57:22.836 [AWT-EventQueue-0] DEBUG ElorES - → Enviando: GET_PROFILE
+2026-01-16 16:57:22.840 [AWT-EventQueue-0] ERROR ElorES - Error al deserializar JSON: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 4 path $
+2026-01-16 16:57:22.841 [AWT-EventQueue-0] ERROR ElorES - Error al obtener perfil: Error al deserializar respuesta
+2026-01-16 16:57:22.842 [AWT-EventQueue-0] INFO  ElorES - MenuPanel inicializado
+2026-01-16 16:57:22.842 [AWT-EventQueue-0] INFO  ElorES - Paneles creados correctamente
+2026-01-16 16:57:22.842 [AWT-EventQueue-0] DEBUG ElorES - Mostrando panel de login
+2026-01-16 16:57:22.853 [AWT-EventQueue-0] INFO  ElorES - ✓ Ventana principal mostrada
+2026-01-16 16:57:22.853 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:57:22.853 [AWT-EventQueue-0] INFO  ElorES - APLICACIÓN LISTA - Esperando interacción del usuario
+2026-01-16 16:57:22.854 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 16:57:44.959 [Thread-1] INFO  ElorES - Intentando login con usuario: adminuser
+2026-01-16 16:57:44.961 [Thread-1] INFO  ElorES - Procesando login...
+2026-01-16 16:57:44.961 [Thread-1] INFO  ElorES - Intentando login para: adminuser
+2026-01-16 16:57:44.961 [Thread-1] DEBUG ElorES - → Enviando: LOGIN
+2026-01-16 16:57:44.962 [Thread-1] ERROR ElorES - Error al deserializar JSON: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 4 path $
+2026-01-16 16:57:44.962 [Thread-1] ERROR ElorES - Login fallido: Error al deserializar respuesta
+2026-01-16 16:57:44.968 [AWT-EventQueue-0] ERROR ElorES - Login fallido para: adminuser
+2026-01-16 16:58:13.744 [Thread-2] INFO  ElorES - Intentando login con usuario: adminuser
+2026-01-16 16:58:13.744 [Thread-2] INFO  ElorES - Procesando login...
+2026-01-16 16:58:13.744 [Thread-2] INFO  ElorES - Intentando login para: adminuser
+2026-01-16 16:58:13.745 [Thread-2] DEBUG ElorES - → Enviando: LOGIN
+2026-01-16 16:58:13.745 [Thread-2] ERROR ElorES - Error al deserializar JSON: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 4 path $
+2026-01-16 16:58:13.745 [Thread-2] ERROR ElorES - Login fallido: Error al deserializar respuesta
+2026-01-16 16:58:13.748 [AWT-EventQueue-0] ERROR ElorES - Login fallido para: adminuser
+2026-01-16 17:02:59.355 [Thread-0] INFO  ElorES - Cerrando aplicación...
+2026-01-16 17:02:59.355 [Thread-0] INFO  ElorES - Desconectando del servidor...
+2026-01-16 17:02:59.357 [Thread-0] INFO  ElorES - ✓ Desconectado del servidor
+2026-01-16 17:02:59.357 [Thread-0] INFO  ElorES - ✓ Aplicación cerrada correctamente
+2026-01-16 17:05:54.688 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 17:05:54.689 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 17:05:54.753 [main] DEBUG ElorES - Servidor: Conectado a ElorServ
+2026-01-16 17:05:54.753 [main] INFO  ElorES - Conexión establecida con ElorServ
+2026-01-16 17:05:54.753 [main] INFO  ElorES - ✓ Conexión establecida con ElorServ
+2026-01-16 17:05:54.754 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:05:54.754 [main] INFO  ElorES - INICIANDO INTERFAZ GRÁFICA
+2026-01-16 17:05:54.754 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:05:54.810 [main] INFO  ElorES - ✓ Look and Feel configurado
+2026-01-16 17:05:54.929 [AWT-EventQueue-0] INFO  ElorES - MainFrame inicializado
+2026-01-16 17:05:54.931 [AWT-EventQueue-0] INFO  ElorES - Inicializando LoginController
+2026-01-16 17:05:54.959 [AWT-EventQueue-0] INFO  ElorES - Inicializando MainController
+2026-01-16 17:05:54.960 [AWT-EventQueue-0] DEBUG ElorES - → Enviando: GET_PROFILE
+2026-01-16 17:05:54.969 [AWT-EventQueue-0] DEBUG ElorES - ← Recibido: UNAUTHORIZED
+2026-01-16 17:05:54.969 [AWT-EventQueue-0] ERROR ElorES - Error al obtener perfil: Sesión inválida o expirada. Por favor, inicia sesión nuevamente.
+2026-01-16 17:05:54.970 [AWT-EventQueue-0] INFO  ElorES - MenuPanel inicializado
+2026-01-16 17:05:54.971 [AWT-EventQueue-0] INFO  ElorES - Paneles creados correctamente
+2026-01-16 17:05:54.971 [AWT-EventQueue-0] DEBUG ElorES - Mostrando panel de login
+2026-01-16 17:05:54.984 [AWT-EventQueue-0] INFO  ElorES - ✓ Ventana principal mostrada
+2026-01-16 17:05:54.985 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:05:54.985 [AWT-EventQueue-0] INFO  ElorES - APLICACIÓN LISTA - Esperando interacción del usuario
+2026-01-16 17:05:54.985 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:06:13.454 [Thread-1] INFO  ElorES - Intentando login con usuario: adminuser
+2026-01-16 17:06:13.454 [Thread-1] INFO  ElorES - Procesando login...
+2026-01-16 17:06:13.455 [Thread-1] INFO  ElorES - Intentando login para: adminuser
+2026-01-16 17:06:13.455 [Thread-1] DEBUG ElorES - → Enviando: LOGIN
+2026-01-16 17:06:13.811 [Thread-1] DEBUG ElorES - ← Recibido: UNAUTHORIZED
+2026-01-16 17:06:13.811 [Thread-1] ERROR ElorES - Login fallido: Credenciales inválidas
+2026-01-16 17:06:13.813 [AWT-EventQueue-0] ERROR ElorES - Login fallido para: adminuser
+2026-01-16 17:06:16.357 [Thread-0] INFO  ElorES - Cerrando aplicación...
+2026-01-16 17:06:16.357 [Thread-0] INFO  ElorES - Desconectando del servidor...
+2026-01-16 17:06:16.359 [Thread-0] INFO  ElorES - ✓ Desconectado del servidor
+2026-01-16 17:06:16.360 [Thread-0] INFO  ElorES - ✓ Aplicación cerrada correctamente
+2026-01-16 17:07:01.863 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 17:07:01.866 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 17:07:01.930 [main] DEBUG ElorES - Servidor: Conectado a ElorServ
+2026-01-16 17:07:01.930 [main] INFO  ElorES - Conexión establecida con ElorServ
+2026-01-16 17:07:01.931 [main] INFO  ElorES - ✓ Conexión establecida con ElorServ
+2026-01-16 17:07:01.932 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:07:01.932 [main] INFO  ElorES - INICIANDO INTERFAZ GRÁFICA
+2026-01-16 17:07:01.932 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:07:02.009 [main] INFO  ElorES - ✓ Look and Feel configurado
+2026-01-16 17:07:02.137 [AWT-EventQueue-0] INFO  ElorES - MainFrame inicializado
+2026-01-16 17:07:02.139 [AWT-EventQueue-0] INFO  ElorES - Inicializando LoginController
+2026-01-16 17:07:02.166 [AWT-EventQueue-0] INFO  ElorES - Inicializando MainController
+2026-01-16 17:07:02.167 [AWT-EventQueue-0] DEBUG ElorES - → Enviando: GET_PROFILE
+2026-01-16 17:07:02.176 [AWT-EventQueue-0] DEBUG ElorES - ← Recibido: UNAUTHORIZED
+2026-01-16 17:07:02.176 [AWT-EventQueue-0] ERROR ElorES - Error al obtener perfil: Sesión inválida o expirada. Por favor, inicia sesión nuevamente.
+2026-01-16 17:07:02.177 [AWT-EventQueue-0] INFO  ElorES - MenuPanel inicializado
+2026-01-16 17:07:02.178 [AWT-EventQueue-0] INFO  ElorES - Paneles creados correctamente
+2026-01-16 17:07:02.178 [AWT-EventQueue-0] DEBUG ElorES - Mostrando panel de login
+2026-01-16 17:07:02.184 [AWT-EventQueue-0] INFO  ElorES - ✓ Ventana principal mostrada
+2026-01-16 17:07:02.185 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:07:02.185 [AWT-EventQueue-0] INFO  ElorES - APLICACIÓN LISTA - Esperando interacción del usuario
+2026-01-16 17:07:02.185 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 17:07:11.248 [Thread-1] INFO  ElorES - Intentando login con usuario: admin@elorrieta.com
+2026-01-16 17:07:11.248 [Thread-1] INFO  ElorES - Procesando login...
+2026-01-16 17:07:11.248 [Thread-1] INFO  ElorES - Intentando login para: admin@elorrieta.com
+2026-01-16 17:07:11.249 [Thread-1] DEBUG ElorES - → Enviando: LOGIN
+2026-01-16 17:07:11.622 [Thread-1] DEBUG ElorES - ← Recibido: SUCCESS
+2026-01-16 17:07:11.622 [Thread-1] DEBUG ElorES - Token de sesión establecido
+2026-01-16 17:07:11.622 [Thread-1] DEBUG ElorES - Token de sesión guardado
+2026-01-16 17:07:11.622 [Thread-1] INFO  ElorES - ✓ Login exitoso para: adminuser
+2026-01-16 17:07:11.623 [Thread-1] INFO  ElorES - Login exitoso para: admin@elorrieta.com
+2026-01-16 17:07:11.625 [AWT-EventQueue-0] INFO  ElorES - Login exitoso para: admin@elorrieta.com
+2026-01-16 17:07:11.625 [AWT-EventQueue-0] INFO  ElorES - Usuario autenticado: adminuser
+2026-01-16 17:07:11.627 [AWT-EventQueue-0] DEBUG ElorES - Mostrando panel de menú
+2026-01-16 17:07:17.327 [Thread-0] INFO  ElorES - Cerrando aplicación...
+2026-01-16 17:07:17.327 [Thread-0] INFO  ElorES - Desconectando del servidor...
+2026-01-16 17:07:17.328 [Thread-0] INFO  ElorES - ✓ Desconectado del servidor
+2026-01-16 17:07:17.328 [Thread-0] INFO  ElorES - ✓ Aplicación cerrada correctamente
+2026-01-16 18:33:32.583 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 18:33:32.586 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 18:33:32.596 [main] ERROR ElorES - Error al conectar con el servidor
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/java.net.Socket.connect(Socket.java:687)
+	at java.base/java.net.Socket.<init>(Socket.java:556)
+	at java.base/java.net.Socket.<init>(Socket.java:325)
+	at client.SocketClient.connect(SocketClient.java:54)
+	at app.App.main(App.java:25)
+2026-01-16 18:33:32.598 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:33:32.598 [main] ERROR ElorES - ERROR CRÍTICO: No se pudo conectar con ElorServ
+2026-01-16 18:33:32.598 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:33:32.598 [main] ERROR ElorES - 
+2026-01-16 18:33:32.599 [main] ERROR ElorES - VERIFICA:
+2026-01-16 18:33:32.599 [main] ERROR ElorES -   1. El servidor ElorServ está ejecutándose
+2026-01-16 18:33:32.599 [main] ERROR ElorES -   2. El servidor escucha en localhost:9000
+2026-01-16 18:33:32.599 [main] ERROR ElorES -   3. La base de datos está disponible
+2026-01-16 18:33:32.599 [main] ERROR ElorES -   4. No hay firewall bloqueando la conexión
+2026-01-16 18:33:32.599 [main] ERROR ElorES - 
+2026-01-16 18:33:53.970 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 18:33:53.972 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 18:33:53.982 [main] ERROR ElorES - Error al conectar con el servidor
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/java.net.Socket.connect(Socket.java:687)
+	at java.base/java.net.Socket.<init>(Socket.java:556)
+	at java.base/java.net.Socket.<init>(Socket.java:325)
+	at client.SocketClient.connect(SocketClient.java:54)
+	at app.App.main(App.java:25)
+2026-01-16 18:33:53.984 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:33:53.984 [main] ERROR ElorES - ERROR CRÍTICO: No se pudo conectar con ElorServ
+2026-01-16 18:33:53.984 [main] ERROR ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:33:53.985 [main] ERROR ElorES - 
+2026-01-16 18:33:53.985 [main] ERROR ElorES - VERIFICA:
+2026-01-16 18:33:53.985 [main] ERROR ElorES -   1. El servidor ElorServ está ejecutándose
+2026-01-16 18:33:53.985 [main] ERROR ElorES -   2. El servidor escucha en localhost:9000
+2026-01-16 18:33:53.985 [main] ERROR ElorES -   3. La base de datos está disponible
+2026-01-16 18:33:53.985 [main] ERROR ElorES -   4. No hay firewall bloqueando la conexión
+2026-01-16 18:33:53.985 [main] ERROR ElorES - 
+2026-01-16 18:34:22.188 [main] INFO  ElorES - Iniciando aplicación ElorES...
+2026-01-16 18:34:22.190 [main] INFO  ElorES - Conectando con ElorServ en localhost:9000...
+2026-01-16 18:34:22.253 [main] DEBUG ElorES - Servidor: Conectado a ElorServ
+2026-01-16 18:34:22.253 [main] INFO  ElorES - Conexión establecida con ElorServ
+2026-01-16 18:34:22.254 [main] INFO  ElorES - ✓ Conexión establecida con ElorServ
+2026-01-16 18:34:22.255 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:34:22.255 [main] INFO  ElorES - INICIANDO INTERFAZ GRÁFICA
+2026-01-16 18:34:22.255 [main] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:34:22.315 [main] INFO  ElorES - ✓ Look and Feel configurado
+2026-01-16 18:34:22.445 [AWT-EventQueue-0] INFO  ElorES - MainFrame inicializado
+2026-01-16 18:34:22.448 [AWT-EventQueue-0] INFO  ElorES - Inicializando LoginController
+2026-01-16 18:34:22.474 [AWT-EventQueue-0] INFO  ElorES - Inicializando MainController
+2026-01-16 18:34:22.475 [AWT-EventQueue-0] DEBUG ElorES - → Enviando: GET_PROFILE
+2026-01-16 18:34:22.485 [AWT-EventQueue-0] DEBUG ElorES - ← Recibido: UNAUTHORIZED
+2026-01-16 18:34:22.485 [AWT-EventQueue-0] ERROR ElorES - Error al obtener perfil: Sesión inválida o expirada. Por favor, inicia sesión nuevamente.
+2026-01-16 18:34:22.486 [AWT-EventQueue-0] INFO  ElorES - MenuPanel inicializado
+2026-01-16 18:34:22.487 [AWT-EventQueue-0] INFO  ElorES - Paneles creados correctamente
+2026-01-16 18:34:22.487 [AWT-EventQueue-0] DEBUG ElorES - Mostrando panel de login
+2026-01-16 18:34:22.499 [AWT-EventQueue-0] INFO  ElorES - ✓ Ventana principal mostrada
+2026-01-16 18:34:22.499 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:34:22.499 [AWT-EventQueue-0] INFO  ElorES - APLICACIÓN LISTA - Esperando interacción del usuario
+2026-01-16 18:34:22.500 [AWT-EventQueue-0] INFO  ElorES - ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-01-16 18:34:27.588 [Thread-1] INFO  ElorES - Intentando login con usuario: a
+2026-01-16 18:34:27.588 [Thread-1] INFO  ElorES - Procesando login...
+2026-01-16 18:34:27.589 [Thread-1] INFO  ElorES - Intentando login para: a
+2026-01-16 18:34:27.589 [Thread-1] DEBUG ElorES - → Enviando: LOGIN
+2026-01-16 18:34:27.740 [Thread-1] DEBUG ElorES - ← Recibido: UNAUTHORIZED
+2026-01-16 18:34:27.741 [Thread-1] ERROR ElorES - Login fallido: Credenciales inválidas
+2026-01-16 18:34:27.743 [AWT-EventQueue-0] ERROR ElorES - Login fallido para: a
+2026-01-16 18:36:03.253 [Thread-0] INFO  ElorES - Cerrando aplicación...
+2026-01-16 18:36:03.254 [Thread-0] INFO  ElorES - Desconectando del servidor...
+2026-01-16 18:36:03.255 [Thread-0] INFO  ElorES - ✓ Desconectado del servidor
+2026-01-16 18:36:03.255 [Thread-0] INFO  ElorES - ✓ Aplicación cerrada correctamente

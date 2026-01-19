@@ -29,7 +29,17 @@ public class UserService {
             Response response = client.sendRequest(ActionType.GET_PROFILE, null);
             
             if (response.getStatus() == StatusCode.SUCCESS) {
-                // TODO: Parsear UserDTO
+                Object data = response.getData();
+                
+                if (data instanceof Map) {
+                    @SuppressWarnings("unchecked")
+                    Map<String, Object> userData = (Map<String, Object>) data;
+                    return parseUserFromMap(userData);
+                } else if (data instanceof UserDTO) {
+                    return (UserDTO) data;
+                }
+                
+                AppLogger.error("Formato de datos no reconocido");
                 return null;
             }
             
@@ -40,6 +50,33 @@ public class UserService {
             AppLogger.error("Error al obtener perfil", e);
             return null;
         }
+    }
+    
+    /**
+     * Parsea un Map en un UserDTO.
+     */
+    private UserDTO parseUserFromMap(Map<String, Object> data) {
+        UserDTO user = new UserDTO();
+        
+        if (data.get("id") != null) {
+            user.setId(((Number) data.get("id")).intValue());
+        }
+        user.setEmail((String) data.get("email"));
+        user.setUsername((String) data.get("username"));
+        user.setNombre((String) data.get("nombre"));
+        user.setApellidos((String) data.get("apellidos"));
+        user.setDni((String) data.get("dni"));
+        user.setDireccion((String) data.get("direccion"));
+        user.setTelefono1((String) data.get("telefono1"));
+        user.setTelefono2((String) data.get("telefono2"));
+        user.setArgazkiaUrl((String) data.get("argazkia_url"));
+        
+        if (data.get("tipo_id") != null) {
+            user.setTipoId(String.valueOf(data.get("tipo_id")));
+        }
+        user.setTipoNombre((String) data.get("tipo_nombre"));
+        
+        return user;
     }
     
     /**
